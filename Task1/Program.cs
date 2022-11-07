@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Task1
 {
@@ -6,14 +7,23 @@ namespace Task1
     {
         private static void Main()
         {
-            string exit;
+            var value = "";
 
             do
             {
+                try
+                {
+                    Console.WriteLine("Please enter some text (to exit enter q):");
+                    value = Console.ReadLine();
 
-                // TODO: Implement the task here.
-                exit = Console.ReadLine();
-            } while (exit != "q");
+                    Console.WriteLine(value?.ElementAt(0));
+                }
+                catch
+                {
+                    Console.WriteLine("Error! The text should not be empty");
+                }
+
+            } while (value != "q");
         }
     }
 }
