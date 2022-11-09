@@ -8,7 +8,7 @@ namespace Task3.Tests
     [TestFixture]
     public class UserTaskControllerTests
     {
-        private readonly UserTaskController _controller;
+        private readonly IBaseUserTaskController _controller;
         private readonly IUserDao _userDao;
 
         public UserTaskControllerTests()

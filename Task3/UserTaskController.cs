@@ -2,7 +2,7 @@
 
 namespace Task3
 {
-    public class UserTaskController
+    public class UserTaskController : IBaseUserTaskController
     {
         private readonly UserTaskService _taskService;
 
